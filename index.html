@@ -62,7 +62,6 @@
         cursor: not-allowed;
     }
 
-    /* Floating hearts */
     .heart {
         position: absolute;
         font-size: 24px;
@@ -76,7 +75,6 @@
         100% { transform: translateY(-10vh); opacity: 0; }
     }
 
-    /* YES screen */
     .yes-screen {
         display: none;
         flex-direction: column;
@@ -119,14 +117,13 @@
 
 <div class="container yes-screen" id="yesScreen">
     <h1>I KNEW YOU LOVE ME 😍🔥</h1>
-    <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" width="260">
+    <img src="https://raw.githubusercontent.com/gasseradel1/Valentine-/main/IMG_2875.jpeg" width="260">
     <div class="graffiti">
         ❤️🎨🔥💘💋😍❤️🎉💃🕺🎨🔥💘
     </div>
 </div>
 
 <script>
-    // Floating hearts
     function createHeart() {
         const heart = document.createElement("div");
         heart.className = "heart";
@@ -138,7 +135,6 @@
     }
     setInterval(createHeart, 300);
 
-    // NO button escape logic (mobile safe)
     const noBtn = document.getElementById("no");
 
     function moveNo() {
@@ -165,7 +161,6 @@
         moveNo();
     });
 
-    // YES button
     document.getElementById("yes").addEventListener("click", () => {
         document.getElementById("main").style.display = "none";
         document.getElementById("yesScreen").style.display = "flex";
